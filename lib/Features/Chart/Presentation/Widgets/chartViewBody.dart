@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter_arc_text/flutter_arc_text.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:wietcorb_task/Core/Utiles/appAssets.dart';
 import 'package:wietcorb_task/Core/Utiles/catsApi.dart';
 import 'package:wietcorb_task/Core/Utiles/hextoColor.dart';
 import 'dart:math';
 
 import 'package:wietcorb_task/Features/Chart/Data/ChartModel.dart';
+import 'package:wietcorb_task/Features/Chart/Presentation/Widgets/arcImage.dart';
 import 'package:wietcorb_task/Features/Chart/Presentation/Widgets/arcText.dart';
 import 'package:wietcorb_task/Features/Chart/Presentation/Widgets/chartCenterW.dart';
 import 'package:wietcorb_task/Features/Chart/Presentation/Widgets/pieChartContent.dart';
@@ -27,7 +29,7 @@ class Chartviewbody extends StatelessWidget {
                 children: [
                   PieChartContent(data: data),
                   Arctext(
-                      angle: 0.3,
+                      angle: 0.4,
                       direction: Direction.clockwise,
                       radius: 80,
                       title: '${data[0].minPoint}-${data[0].maxPoint}',
@@ -48,7 +50,7 @@ class Chartviewbody extends StatelessWidget {
                     color: helper.hexToColor(data[0].fontColor),
                   ),
                   Arctext(
-                      angle: -0.1,
+                      angle: -0.2,
                       direction: Direction.counterClockwise,
                       radius: 90,
                       title: '${data[1].minPoint}-${data[1].maxPoint}',
@@ -88,7 +90,7 @@ class Chartviewbody extends StatelessWidget {
                       r: 0,
                       color: helper.hexToColor(data[2].fontColor)),
                   Arctext(
-                      angle: 1.5,
+                      angle: 1.6,
                       direction: Direction.clockwise,
                       radius: 110,
                       title: '${data[3].minPoint}-${data[3].maxPoint}',
@@ -98,16 +100,23 @@ class Chartviewbody extends StatelessWidget {
                       r: 50,
                       color: Colors.black),
                   Arctext(
-                      angle: 1.7,
+                      angle: 1.8,
                       direction: Direction.clockwise,
-                      radius: 70,
+                      radius: 73,
                       title: data[3].tierName,
                       b: 50,
                       t: 0,
                       l: 30,
                       r: 0,
                       color: helper.hexToColor(data[3].fontColor)),
-                  const Chartcenterw()
+                  const Chartcenterw(),
+                  const Positioned(
+                    right: 20,
+                    bottom: 90,
+                    child: Align(
+                        alignment: Alignment.bottomRight,
+                        child: Arcimage(angle: 15.7)),
+                  ),
                 ],
               );
             } else {

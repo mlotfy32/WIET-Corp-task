@@ -12,8 +12,9 @@ class Chartcenterw extends StatelessWidget {
       child: Column(
         children: [
           Container(
+            alignment: Alignment.center,
             height: 60,
-            width: 120,
+            width: 100,
             decoration: BoxDecoration(boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.2),
@@ -23,6 +24,7 @@ class Chartcenterw extends StatelessWidget {
               ),
             ], borderRadius: BorderRadius.circular(15), color: Colors.white),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   Appstrings.eMERALD,
@@ -37,7 +39,8 @@ class Chartcenterw extends StatelessWidget {
           ),
           Text(
             Appstrings.numper,
-            style: Styles.centerChart.copyWith(color: Colors.black),
+            style: Styles.centerChart.copyWith(
+                color: Colors.black, fontSize: 18, fontWeight: FontWeight.w500),
           ),
           Text(
             Appstrings.tiercr,

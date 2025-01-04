@@ -35,7 +35,7 @@ class ImagesviewBody extends StatelessWidget {
                       child: GridImage(url: data[1].url)),
                   StaggeredGridTile.count(
                       crossAxisCellCount: 1,
-                      mainAxisCellCount: 2.5,
+                      mainAxisCellCount: 2.8,
                       child: GridImage(url: data[2].url)),
                   StaggeredGridTile.count(
                       crossAxisCellCount: 1,

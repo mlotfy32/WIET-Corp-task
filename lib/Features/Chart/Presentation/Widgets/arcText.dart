@@ -36,7 +36,10 @@ class Arctext extends StatelessWidget {
             radius: radius,
             text: title,
             textStyle: TextStyle(
-                fontSize: 22, color: color, fontWeight: FontWeight.w500),
+                letterSpacing: -0.6,
+                fontSize: 20,
+                color: color,
+                fontWeight: FontWeight.w600),
             startAngle: -pi / 2,
             startAngleAlignment: StartAngleAlignment.start,
             placement: Placement.outside,
