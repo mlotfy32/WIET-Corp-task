@@ -6,6 +6,6 @@ class Imagesview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ImagesviewBody();
+    return const ImagesviewBody();
   }
 }
